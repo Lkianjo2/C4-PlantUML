@@ -1,6 +1,6 @@
-!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml
+' !includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml
 ' uncomment the following line and comment the first to use locally
-' !include C4_Container.puml
+!include C4_Container.puml
 
 ' Scope: A single container.
 ' Primary elements: Components within the container in scope.
@@ -14,6 +14,13 @@
 
 ' Styling
 ' ##################################
+
+skinparam storage<<software csc>> {
+    StereotypeFontColor ELEMENT_FONT_COLOR
+    FontColor #000000
+    BackgroundColor COMPONENT_BG_COLOR
+    BorderColor #78A8D8
+}
 
 skinparam rectangle<<component>> {
     StereotypeFontColor ELEMENT_FONT_COLOR
@@ -50,6 +57,9 @@ endlegend
 
 !define Component(e_alias, e_label, e_techn) rectangle "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<component>> as e_alias
 !define Component(e_alias, e_label, e_techn, e_descr) rectangle "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<component>> as e_alias
+
+!define CSC(e_alias, e_label, e_techn) storage "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<software csc>> as e_alias
+!define CSC(e_alias, e_label, e_techn, e_descr) storage "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<software csc>> as e_alias
 
 !define ComponentDb(e_alias, e_label, e_techn) database "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//" <<component>> as e_alias
 !define ComponentDb(e_alias, e_label, e_techn, e_descr) database "==e_label\n//<size:TECHN_FONT_SIZE>[e_techn]</size>//\n\n e_descr" <<component>> as e_alias

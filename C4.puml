@@ -97,6 +97,38 @@ center footer <font color=red>Warning:</font> Created for discussion, needs to b
 !define Rel_Right(e_from,e_to, e_label) Rel_R(e_from,e_to, e_label)
 !define Rel_Right(e_from,e_to, e_label, e_techn) Rel_R(e_from,e_to, e_label, e_techn)
 
+!define BRel(e_from,e_to, e_label) Rel_(e_from,e_to, e_label, "<-->")
+!define BRel(e_from,e_to, e_label, e_techn) Rel_(e_from,e_to, e_label, e_techn, "<-->")
+
+!define BRel_Back(e_to, e_from, e_label) Rel_(e_to, e_from, e_label, "<-->")
+!define BRel_Back(e_to, e_from, e_label, e_techn) Rel_(e_to, e_from, e_label, e_techn, "<-->")
+
+!define BRel_Neighbor(e_from,e_to, e_label) Rel_(e_from,e_to, e_label, "<->")
+!define BRel_Neighbor(e_from,e_to, e_label, e_techn) Rel_(e_from,e_to, e_label, e_techn, "<->")
+
+!define BRel_Back_Neighbor(e_to, e_from, e_label) Rel_(e_to, e_from, e_label, "<->")
+!define BRel_Back_Neighbor(e_to, e_from, e_label, e_techn) Rel_(e_to, e_from, e_label, e_techn, "<->")
+
+!define BRel_D(e_from,e_to, e_label) Rel_(e_from,e_to, e_label, "<-DOWN->")
+!define BRel_D(e_from,e_to, e_label, e_techn) Rel_(e_from,e_to, e_label, e_techn, "<-DOWN->")
+!define BRel_Down(e_from,e_to, e_label) Rel_D(e_from,e_to, e_label)
+!define BRel_Down(e_from,e_to, e_label, e_techn) Rel_D(e_from,e_to, e_label, e_techn)
+
+!define BRel_U(e_from,e_to, e_label) Rel_(e_from,e_to, e_label, "<-UP->")
+!define BRel_U(e_from,e_to, e_label, e_techn) Rel_(e_from,e_to, e_label, e_techn, "<-UP->")
+!define BRel_Up(e_from,e_to, e_label) Rel_U(e_from,e_to, e_label)
+!define BRel_Up(e_from,e_to, e_label, e_techn) Rel_U(e_from,e_to, e_label, e_techn)
+
+!define BRel_L(e_from,e_to, e_label) Rel_(e_from,e_to, e_label, "<-LEFT->")
+!define BRel_L(e_from,e_to, e_label, e_techn) Rel_(e_from,e_to, e_label, e_techn, "<-LEFT->")
+!define BRel_Left(e_from,e_to, e_label) Rel_L(e_from,e_to, e_label)
+!define BRel_Left(e_from,e_to, e_label, e_techn) Rel_L(e_from,e_to, e_label, e_techn)
+
+!define BRel_R(e_from,e_to, e_label) Rel_(e_from,e_to, e_label, "<-RIGHT->")
+!define BRel_R(e_from,e_to, e_label, e_techn) Rel_(e_from,e_to, e_label, e_techn, "<-RIGHT->")
+!define BRel_Right(e_from,e_to, e_label) Rel_R(e_from,e_to, e_label)
+!define BRel_Right(e_from,e_to, e_label, e_techn) Rel_R(e_from,e_to, e_label, e_techn)
+
 ' Layout Helpers
 ' ##################################
 
